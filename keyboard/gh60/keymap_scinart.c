@@ -47,6 +47,26 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,MENU, TRNS,          TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                     TRNS, TRNS,TRNS,TRNS),
 
+    /* Keymap 1: FN1 Layer mouse key
+     * ,-----------------------------------------------------------.
+     * |ESC | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backsp|
+     * |-----------------------------------------------------------|
+     * |FN0  |FN1|   |   |   |   |   | \ | ↑ | / |    |   |   |    |
+     * |-----------------------------------------------------------|
+     * |BSPC  |   |   |   |   |   |    |← | ↓ |→ |   |   |Return |
+     * |-----------------------------------------------------------|
+     * |Shift  |   |   |   |   |   |    | / | R | \ |    |   Up   |
+     * |-----------------------------------------------------------|
+     * |Ctrl|Gui |Alt |      Click           |AltGr|Left|Down|Right|
+     * `-----------------------------------------------------------'
+     */
+    /* KEYMAP_ANSI(
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BTN1,MS_U,BTN2,TRNS,TRNS,TRNS,TRNS, \
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MS_L,MS_D,MS_R,TRNS,TRNS,     TRNS,  \
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
+         TRNS,TRNS,TRNS,          TRNS,                     TRNS, TRNS,TRNS,TRNS),
+    */
 };
 
 /*
