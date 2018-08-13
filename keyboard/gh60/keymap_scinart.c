@@ -31,7 +31,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------------------------.
      * |ESC | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backsp|
      * |-----------------------------------------------------------|
-     * |FN0  |   |   |   |   |   |   |⇤ | ↑ | ⇥ | ⤒ |   |   |    |
+     * |FN0  |   |   |   |   |   |INS|⇤ | ↑ | ⇥ | ⤒ |   |   |FN1 |
      * |-----------------------------------------------------------|
      * |BSPC  | V0| V-| V+|   |   |DEL |← | ↓ |→ |⤓  |   |Return |
      * |-----------------------------------------------------------|
@@ -42,20 +42,20 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     KEYMAP_ANSI(
         ESC, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME, UP ,END ,PGUP,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,INS, HOME, UP ,END ,PGUP,TRNS,TRNS,FN1, \
         TRNS,MUTE,VOLD,VOLU,TRNS,TRNS,DEL ,LEFT,DOWN,RGHT,PGDN,TRNS,     TRNS,  \
         TRNS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,MENU, TRNS,          TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                     TRNS, TRNS,TRNS,TRNS),
 
     /* Keymap 1: FN1 Layer mouse key
      * ,-----------------------------------------------------------.
-     * |ESC | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backsp|
+     * |    |   |   |   |   |   |   |   |   |   |  |   |   |       |
      * |-----------------------------------------------------------|
-     * |FN0  |FN1|   |   |   |   |   | \ | ↑ | / |    |   |   |    |
+     * |     |   |   |   |   |   |   | M1| ↑ | M2|    |   |   |    |
      * |-----------------------------------------------------------|
-     * |BSPC  |   |   |   |   |   |    |← | ↓ |→ |   |   |Return |
+     * |      |   |   |   |   |   |    |← | ↓ |→ |   |   |       |
      * |-----------------------------------------------------------|
-     * |Shift  |   |   |   |   |   |    | / | R | \ |    |   Up   |
+     * |Shift  |   |   |   |   |   |    | M4| M3| M5|    |    UP   |
      * |-----------------------------------------------------------|
      * |Ctrl|Gui |Alt |      Click           |AltGr|Left|Down|Right|
      * `-----------------------------------------------------------'
@@ -64,7 +64,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
          TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BTN1,MS_U,BTN2,TRNS,TRNS,TRNS,TRNS, \
          TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MS_L,MS_D,MS_R,TRNS,TRNS,     TRNS,  \
-         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BTN4,BTN3,BTN5,TRNS,TRNS,     TRNS, \
          TRNS,TRNS,TRNS,          TRNS,                     TRNS, TRNS,TRNS,TRNS),
     */
 };
@@ -80,6 +80,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM fn_actions[] = {
     /* [0] = ACTION_LAYER_ON_OFF(1) */
     [0] = ACTION_LAYER_TAP_KEY(1, KC_TAB),
+    [1] = ACTION_LAYER_TAP_TOGGLE(2),
 };
 
 #ifdef KEYMAP_IN_EEPROM_ENABLE
