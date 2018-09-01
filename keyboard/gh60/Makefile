@@ -54,7 +54,7 @@ SRC =	keymap_common.c \
 	backlight.c \
 	ledmap.c
 
-KEYMAP ?= scilock
+KEYMAP ?= scinart
 SRC := keymap_$(KEYMAP).c $(SRC)
 
 

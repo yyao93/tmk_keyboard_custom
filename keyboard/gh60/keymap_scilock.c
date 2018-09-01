@@ -45,7 +45,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,PSCR,TRNS,INS, HOME, UP ,END ,PGUP,TRNS,TRNS,FN1, \
         TRNS,MUTE,VOLD,VOLU,TRNS,TRNS,DEL ,LEFT,DOWN,RGHT,PGDN,TRNS,     TRNS,  \
         TRNS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,MENU,TRNS,          TRNS, \
-        TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),
+        BTN1,BTN3,BTN2,          TRNS,                    TRNS,TRNS,TRNS,TRNS),
 
     /* Layer 2 */
     KEYMAP_ANSI(
