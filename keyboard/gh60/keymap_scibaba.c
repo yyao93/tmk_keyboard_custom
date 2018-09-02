@@ -65,7 +65,31 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,PSCR,TRNS,INS, HOME, UP ,END ,PGUP,TRNS,TRNS,FN1, \
         CAPS,MUTE,VOLD,VOLU,TRNS,TRNS,DEL ,LEFT,DOWN,RGHT,PGDN,TRNS,     TRNS,  \
         TRNS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,          TRNS,                    FN2 ,TRNS,TRNS,TRNS),
+
+    // Layer for jumpnbump
+    /* ,-----------------------------------------------------------.
+     * |    |   |   |   |   |   |   |   |   |   |  |   |   |       |
+     * |-----------------------------------------------------------|
+     * |     |   |   |   |   |   |   | M1| ↑ | M2|    |   |   |    |
+     * |-----------------------------------------------------------|
+     * |      |   |   |   |   |   |    |← | ↓ |→ |   |   |       |
+     * |-----------------------------------------------------------|
+     * |Shift  |   |   |   |   |   |    | M4| M3| M5|    |    UP   |
+     * |-----------------------------------------------------------|
+     * |Ctrl|Gui |Alt |      Click           |AltGr|Left|Down|Right|
+     * `-----------------------------------------------------------'
+     */
+    KEYMAP_ANSI(
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+         TRNS,TRNS,   I,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+         TRNS,   J,   K,   L,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     NLCK, \
+         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            P8, \
+         TRNS,TRNS,TRNS,          TRNS,                    TRNS,  P4,  P5,  P6),
+
+
+
+
 };
 
 /*
@@ -79,6 +103,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_TAP_KEY(2, KC_TAB),
     [1] = ACTION_LAYER_TOGGLE(1),
+    [2] = ACTION_LAYER_TOGGLE(3),
 };
 
 #ifdef KEYMAP_IN_EEPROM_ENABLE
