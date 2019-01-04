@@ -57,7 +57,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift  |⟸| ⏸ |⟹|   |   |    |   |    |    |   |   Up   |
      * |-----------------------------------------------------------|
-     * |Ctrl|Gui |Alt |      Space           |AltGr|Left|Down|Right|
+     * |Ctrl|Gui |Alt |      Space           |AltGr|Left|Down|RCTL|
      * `-----------------------------------------------------------'
      */
     KEYMAP_ANSI(
@@ -65,7 +65,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,PSCR,TRNS,INS, HOME, UP ,END ,PGUP,TRNS,TRNS,FN1, \
         CAPS,MUTE,VOLD,VOLU,TRNS,TRNS,DEL ,LEFT,DOWN,RGHT,PGDN,TRNS,     TRNS,  \
         TRNS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        TRNS,TRNS,TRNS,          TRNS,                    FN2 ,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,          TRNS,                    FN2 ,TRNS,TRNS,RCTL),
 
     // Layer for jumpnbump
     /* ,-----------------------------------------------------------.
