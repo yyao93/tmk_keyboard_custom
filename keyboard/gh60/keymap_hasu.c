@@ -4,6 +4,10 @@
  * Hasu
  */
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // Goal: (Have not have time to do it yet):
+    // tricky Esc
+    // tricky Space/Shift
+    // Toggle Layer
     /* Keymap 0: Default Layer
      * ,-----------------------------------------------------------.
      * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
